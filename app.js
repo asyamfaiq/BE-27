@@ -10,15 +10,15 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then((db) => {
+  .then(() => {
     console.log("tersambung ke db");
   })
   .catch((err) => console.log(err));
 
-app.use(express.json());
-app.use(allRoutes);
-app.use(cors());
-
 app.listen(process.env.PORT, (req,res) => {
     console.log(`server run port  ${process.env.PORT}`);
 })
+
+app.use(express.json());
+app.use(cors());
+app.use(allRoutes);
