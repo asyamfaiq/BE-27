@@ -15,8 +15,6 @@ mongoose
   })
   .catch((err) => console.log(err));
 
-
-
 app.listen(process.env.PORT, (req,res) => {
     console.log(`server run port  ${process.env.PORT}`);
 })
